@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1071,4 +1070,283 @@ footer{
 
 
         <div class="price-card featured">
+
+            <div class="badge">
+                MOST POPULAR
+            </div>
+
+            <h3>ELITE</h3>
+
+            <div class="price">
+                $69 <small>/ MONTH</small>
+            </div>
+
+            <ul>
+                <li>24/7 gym access</li>
+                <li>All group classes</li>
+                <li>Personalized plan</li>
+                <li>Performance tracking</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-orange">
+                CHOOSE PLAN
+            </a>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>ULTIMATE</h3>
+
+            <div class="price">
+                $119 <small>/ MONTH</small>
+            </div>
+
+            <ul>
+                <li>Everything in Elite</li>
+                <li>Personal trainer</li>
+                <li>Nutrition guidance</li>
+                <li>Recovery sessions</li>
+            </ul>
+
+            <a href="#contact" class="btn btn-outline">
+                CHOOSE PLAN
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- COACHES -->
+<section class="content reveal" id="coaches">
+
+    <div class="section-title">
+
+        <div>
+            <div class="hero-tag">THE TEAM</div>
+            <h2>MEET THE<br><span>COACHES.</span></h2>
+        </div>
+
+        <p>
+            Experienced coaches who know how to push you
+            beyond the limits you thought you had.
+        </p>
+
+    </div>
+
+
+    <div class="coaches">
+
+        <div class="coach">
+
+            <div class="coach-number">
+                01
+            </div>
+
+            <div class="coach-avatar"></div>
+
+            <div class="coach-info">
+                <h3>MAX RAY</h3>
+                <span>STRENGTH COACH</span>
+            </div>
+
+        </div>
+
+
+        <div class="coach">
+
+            <div class="coach-number">
+                02
+            </div>
+
+            <div class="coach-avatar"></div>
+
+            <div class="coach-info">
+                <h3>LENA KROSS</h3>
+                <span>CONDITIONING COACH</span>
+            </div>
+
+        </div>
+
+
+        <div class="coach">
+
+            <div class="coach-number">
+                03
+            </div>
+
+            <div class="coach-avatar"></div>
+
+            <div class="coach-info">
+                <h3>JAY STONE</h3>
+                <span>PERFORMANCE COACH</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<div class="cta reveal">
+
+    <h2>
+        DON'T WAIT.<br>
+        <span>GET STRONG.</span>
+    </h2>
+
+    <p>
+        Your strongest version is built one workout at a time.
+        Start your FORGE journey today.
+    </p>
+
+    <a href="#contact" class="btn btn-orange">
+        JOIN FORGE FIT →
+    </a>
+
+</div>
+
+
+<!-- CONTACT -->
+<section class="contact reveal" id="contact">
+
+    <div>
+
+        <div class="hero-tag">
+            CONTACT
+        </div>
+
+        <h2>
+            LET'S<br>
+            <span>FORGE.</span>
+        </h2>
+
+        <p>
+            FORGE FITNESS CLUB<br>
+            Downtown Performance District<br>
+            Open 24 Hours<br><br>
+
+            +1 800 FORGE FIT<br>
+            hello@forgefit.com
+        </p>
+
+    </div>
+
+
+    <form onsubmit="submitForm(event)">
+
+        <input
+            type="text"
+            placeholder="Full Name"
+            required
+        >
+
+        <input
+            type="email"
+            placeholder="Email Address"
+            required
+        >
+
+        <input
+            type="tel"
+            placeholder="Phone Number"
+        >
+
+        <textarea
+            placeholder="Tell us about your fitness goals..."
+            required
+        ></textarea>
+
+        <button class="btn btn-orange" type="submit">
+            SEND MESSAGE →
+        </button>
+
+    </form>
+
+</section>
+
+
+<footer>
+
+    <div>
+        © 2026 FORGE FITNESS
+    </div>
+
+    <div>
+        BUILT FOR THE DRIVEN.
+    </div>
+
+</footer>
+
+
+<script>
+
+/* SCROLL ANIMATION */
+
+const observer = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if(entry.isIntersecting){
+                entry.target.classList.add("show");
+            }
+
+        });
+
+    },
+    {
+        threshold:.12
+    }
+);
+
+document.querySelectorAll(".reveal").forEach(el => {
+    observer.observe(el);
+});
+
+
+/* HERO MOUSE EFFECT */
+
+const visual = document.querySelector(".hero-visual");
+
+document.addEventListener("mousemove", e => {
+
+    if(window.innerWidth < 900) return;
+
+    const x =
+        (e.clientX / window.innerWidth - .5) * 2;
+
+    const y =
+        (e.clientY / window.innerHeight - .5) * 2;
+
+    visual.style.transform =
+        `rotateY(${x * 5}deg) rotateX(${y * -5}deg)`;
+
+});
+
+
+/* FORM */
+
+function submitForm(event){
+
+    event.preventDefault();
+
+    alert(
+        "Thanks for contacting FORGE FIT! Our team will contact you shortly."
+    );
+
+    event.target.reset();
+
+}
+
+</script>
+
+</body>
+</html>
 ```
